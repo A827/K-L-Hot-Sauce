@@ -3,81 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KÜL Hot Sauce – From Fire to Flavor." />
+  <meta name="keywords" content="hot sauce, chili, spicy, KÜL, cayenne, jalapeno" />
   <title>KÜL Hot Sauce</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <meta name="description" content="KÜL - From Fire to Flavor. Handcrafted hot sauces made with real ingredients.">
-  <meta name="keywords" content="hot sauce, chili, spicy sauce, KÜL, cayenne, jalapeno">
-  <!-- Google Analytics (optional) -->
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
-  <!-- Hero Section -->
+  <header class="navbar">
+    <div class="logo">KÜL</div>
+    <nav>
+      <a href="#flavors">Flavors</a>
+      <a href="#about">About</a>
+      <a href="#pairings">Pairings</a>
+      <a href="#contact">Contact</a>
+      <button id="darkToggle">🌓</button>
+    </nav>
+  </header>
+
   <section class="hero">
-    <div class="hero-content">
-      <h1>KÜL</h1>
-      <p class="tagline">From Fire to Flavor</p>
-      <a href="#products" class="btn">Explore Flavors</a>
+    <div class="hero-text">
+      <h1>From Fire<br>to Flavor</h1>
+      <p class="tagline">Handcrafted hot sauces made with real heat.</p>
+      <a href="#flavors" class="btn">Explore Flavors</a>
     </div>
     <div class="hero-image">
-      <img src="assets/hero_bottles.png" alt="KÜL Sauces" />
+      <img src="assets/hero_bottles.png" alt="KÜL Hot Sauce Bottles" />
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about">
-    <h2>About</h2>
-    <p>
-      KÜL crafts bold, honest, and naturally fiery sauces that ignite flavor without compromising quality. We are here to celebrate real ingredients, simple recipes, and balanced heat – from the ember to the flame.
-    </p>
-  </section>
-
-  <!-- Products Section -->
-  <section class="products" id="products">
-    <h2>Our Products</h2>
+  <section class="products" id="flavors">
+    <h2>Our Flavors</h2>
     <div class="product-list">
       <div class="product">
         <img src="assets/cayenne.png" alt="Cayenne Hot Sauce" />
-        <h3>KÜL Cayenne Hot Sauce</h3>
-        <p>Fiery and tangy, with a classic cayenne pepper heat.</p>
-        <a href="https://wa.me/905xxxxxxxxx" class="btn">Buy Now</a>
+        <h3>Cayenne Heat</h3>
+        <p>Classic fiery kick with smooth depth. Great on grilled meat.</p>
+        <a href="https://wa.me/905XXXXXXXX" class="btn">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="assets/jalapeno.png" alt="Jalapeno Hot Sauce" />
+        <h3>Fresh Jalapeño</h3>
+        <p>Bright and tangy with mild heat. Perfect for tacos and eggs.</p>
+        <a href="https://wa.me/905XXXXXXXX" class="btn">Buy Now</a>
       </div>
       <div class="product">
         <img src="assets/sweet_chili.png" alt="Sweet Chili Sauce" />
-        <h3>KÜL Sweet Chili Sauce</h3>
-        <p>Sweet and mild, with a touch of tangy chili flavor.</p>
-        <a href="https://wa.me/905xxxxxxxxx" class="btn">Buy Now</a>
-      </div>
-      <div class="product">
-        <img src="assets/jalapeno.png" alt="Jalapeño Sauce" />
-        <h3>KÜL Jalapeño Sauce</h3>
-        <p>Vibrant and zesty with a bright jalapeño kick.</p>
-        <a href="https://wa.me/905xxxxxxxxx" class="btn">Buy Now</a>
+        <h3>Sweet Chili</h3>
+        <p>Savory sweetness with a soft punch. Great with snacks and rolls.</p>
+        <a href="https://wa.me/905XXXXXXXX" class="btn">Buy Now</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact">
+  <section class="about" id="about">
+    <h2>About KÜL</h2>
+    <p>KÜL Hot Sauce is born in Cyprus, crafted with fresh peppers and bold character. Every bottle is a blend of tradition and heat – for those who love flavor with fire.</p>
+  </section>
+
+  <section class="tips" id="pairings">
+    <h2>🔥 Perfect Pairings</h2>
+    <ul>
+      <li>🌶️ Cayenne – BBQ, burgers, roast chicken</li>
+      <li>🌿 Jalapeño – Tacos, avocado toast, eggs</li>
+      <li>🍯 Sweet Chili – Dumplings, fries, grilled halloumi</li>
+    </ul>
+  </section>
+
+  <section class="contact" id="contact">
     <h2>Contact Us</h2>
     <form action="https://formspree.io/f/yourformid" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" placeholder="Your message..." required></textarea>
       <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 KÜL Hot Sauce. All rights reserved.</p>
-    <button id="toggle-mode" class="btn">Toggle Dark Mode</button>
   </footer>
 
-  <!-- JavaScript for Dark Mode Toggle -->
   <script>
-    const toggle = document.getElementById('toggle-mode');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
+    document.getElementById("darkToggle").addEventListener("click", function () {
+      document.body.classList.toggle("dark");
     });
   </script>
 </body>
