@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,16 +10,46 @@ body {
   background-color: #fefefe;
   color: #171717;
   line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+  background: none;
+  border: 1px solid #171717;
+  color: #171717;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #171717;
+  color: #fff;
 }
 
 /* Hero Section */
 .hero {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #0a0a0a;
   color: #fff;
   padding: 60px 10%;
+}
+
+.hero-content {
+  flex: 1 1 300px;
 }
 
 .hero h1 {
@@ -33,23 +63,14 @@ body {
   margin: 10px 0 30px;
 }
 
-.btn {
-  background: none;
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 12px 24px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.btn:hover {
-  background: #fff;
-  color: #000;
+.hero-image {
+  flex: 1 1 300px;
+  text-align: center;
 }
 
 .hero-image img {
-  max-width: 300px;
+  max-width: 100%;
+  height: auto;
 }
 
 /* About Section */
@@ -79,14 +100,12 @@ body {
 .product-list {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .product {
-  flex: 1;
-  min-width: 240px;
-  max-width: 300px;
+  flex: 1 1 240px;
   background: #fff;
   padding: 20px;
   border-radius: 12px;
@@ -107,4 +126,100 @@ body {
 .product p {
   font-size: 14px;
   margin-bottom: 16px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form input, form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f1f1f1;
+  color: #555;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark .btn {
+  border-color: #eee;
+  color: #eee;
+}
+
+body.dark .btn:hover {
+  background-color: #eee;
+  color: #121212;
+}
+
+body.dark .hero {
+  background-color: #1e1e1e;
+}
+
+body.dark .about,
+body.dark .products,
+body.dark .contact,
+body.dark footer {
+  background-color: #1a1a1a;
+}
+
+body.dark form input,
+body.dark form textarea {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #eee;
+}
+
+body.dark .product {
+  background: #2a2a2a;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
 }
